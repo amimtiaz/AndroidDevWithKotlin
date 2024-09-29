@@ -6,6 +6,7 @@ class Car(val brand: String, var year: Int) {
     }
 }
 
+
 fun main() {
     val myCar = Car("Toyota", 2021)
     println(myCar.brand) // Accessing property
