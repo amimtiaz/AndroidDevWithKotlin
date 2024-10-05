@@ -13,6 +13,51 @@ fun main() {
     myCar.startEngine()   // Calling function
 }
 
+// conditional statement ==>  
+class MyClass {
+
+    companion object{
+        @JvmStatic
+        fun main(args:Array<String>){
+
+            var num = 11
+            var msg = ""
+
+            msg = if (num>100) "No. is Greater!" else " No. is Smaller!"
+            println(msg)
+
+            if (num > 100) {
+                println("No. is Greater!")
+            } else if (num == 100){
+                println("It's equal!")
+            }
+            else{
+                println("No. is Smaller!")
+            }
+
+            when(num){
+                1->{
+
+                }
+                100->{
+
+                }
+            }
+
+            when{
+                num<100 -> {
+
+                }
+                num == 100 -> {
+
+                }
+            }
+        }
+    }
+    
+}
+
+
 
 // Constructors
 class Person(val name: String, var age: Int)
