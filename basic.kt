@@ -58,6 +58,39 @@ class MyClass {
 }
 
 
+// For Loop ===>>
+            var num = 0
+            for (i in 0..10){
+                println("Number is : ${num++} ")
+            }
+
+            for (i in 0 until 10){
+                println("Number is: ${num++}")
+            }
+
+            for (i in 10 downTo  0 step 2){
+                println("Number is: ${num++}")
+            }
+
+            for (i in  0..12 step 3){
+                println("Number is: ${num++}")
+            }
+
+
+            val arrNum = ArrayList<Int>()
+            arrNum.add(1)
+            arrNum.add(2)
+            arrNum.add(3)
+            arrNum.add(4)
+            arrNum.add(5)
+            arrNum.add(6)
+            arrNum.add(7)
+
+            for (i  in arrNum) {
+                println("Array Number is: ${i}")
+            }
+
+
 
 // Constructors
 class Person(val name: String, var age: Int)
