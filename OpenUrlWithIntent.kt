@@ -1,4 +1,4 @@
-
+// Intent ===>>
 binding.urlBtn.setOnClickListener{
             val url = "https://www.codervive.com"
             val intent = Intent(Intent.ACTION_VIEW).apply {
@@ -11,4 +11,10 @@ binding.urlBtn.setOnClickListener{
             } else {
                 Toast.makeText(this, "No application available to open the URL", Toast.LENGTH_SHORT).show()
             }
+        }
+// another method ===>
+  binding.urlBtn.setOnClickListener {
+            val url = "https://codervive.com/"
+            val intent =  Intent(Intent.ACTION_VIEW, Uri.parse(url))
+            startActivity(intent)
         }
