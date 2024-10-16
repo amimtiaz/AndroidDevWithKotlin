@@ -1,3 +1,81 @@
+// enum
+fun main() {
+
+    println("Today is: " + Days.Monday)
+
+    for (day in Days.values()) {
+        if (day.holiday) {
+            println("" + day + " is a holiday!")
+        }
+    }
+
+}
+
+enum class Days(val holiday: Boolean = false){
+    Sunday(true),
+    Monday,
+    Tuesday,
+    Wednesday,
+    Thursday,
+    Friday,
+    SATURDAY
+}
+
+enum class Direction{
+    EAST, WEST, NORTH, SOUTH
+}
+
+enum class Gender{
+    MALE, FEMALE, TRANS
+}
+
+enum class Color(val rgb: Int) {
+    RED(0xFF0000),
+    GREEN(0x00FF00),
+    BLUE(0x0000FF)
+}
+
+
+
+// Interface
+interface IClass {
+    var operator: String
+
+    // Provide a default implementation for square
+    fun square(a: Int): Int {
+        return a * a
+    }
+}
+
+abstract class AbClass {
+    var name: String = "John"
+    abstract var branch: String
+
+    fun add(a: Int, b: Int): Int {
+        return a + b
+    }
+
+    abstract fun operate(a: Int, b: Int): Int
+}
+
+class MyClass : AbClass() {
+    override var branch: String = "Computer"
+
+    override fun operate(a: Int, b: Int): Int {
+        return a + b
+    }
+}
+
+class NewClass : IClass {
+    override var operator: String = "Add"
+
+    // Overriding square function to return a cube
+    override fun square(a: Int): Int {
+        return a * a * a // This now computes the cube instead of square
+    }
+}
+
+
 // Classes and Objects
 class Car(val brand: String, var year: Int) {
     // Member function
