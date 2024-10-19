@@ -1,3 +1,44 @@
+
+// Landmass and Higher Order Functions
+fun main() {
+    println("The Square of 5: " + sqr(5) )
+
+    println("The Sum is: " + add(5,10))
+
+    printName("Imtiaz")
+    printName("New Bangladesh")
+}
+
+val sqr = {x: Int -> x*x}
+
+val add: (Int, Int) -> Int = {x,y -> x+y}
+
+val printName = {strName: String -> println("Hello, " + strName) }
+
+
+
+// generic class
+fun main() {
+    val genClass = GenClass<String>("Imtiaz")
+    val genClass2 = GenClass<Int>(10)
+    val genClass3 = GenClass(true)
+    val genClass4 = GenClass(10.5)
+}
+
+class GenClass<T>(value: T){
+    init {
+        println("The value is: " + value)
+        Check(value)
+    }
+}
+
+fun <T> Check(text: T){
+    println("Received Value is: " + text)
+}
+
+
+
+
 // enum
 fun main() {
 
