@@ -34,5 +34,5 @@ val handler = object : Handler(Looper.getMainLooper()) {
 
 // Flash Screen
 Handler(Looper.getMainLooper()).postDelayed({
-         startActivity(Intent(this, MainActivity::class.java))
+         //startActivity(Intent(this, MainActivity::class.java))
       },1000)
